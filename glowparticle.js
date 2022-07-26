@@ -36,5 +36,11 @@ export class GlowParticle {
             this.vy *= -1;
             this.y -= 10;
         }
+
+        ctx.beginPath();
+
+        ctx.fillStyle = `rgba(${this.rgb.r}, ${this.rgb.g}, ${this.rgb.b}, 1)`;
+        ctx.arc(this.x, this.y, this.radius, 0, PI2, false);
+        ctx.fill();
     }
 }
